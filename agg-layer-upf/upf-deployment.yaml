@@ -1,0 +1,8 @@
+apiVersion: nf.nephio.org/v1alpha1
+kind: UPFDeployment
+metadata: # kpt-merge: /upf-deployment
+  name: upf-deployment
+  annotations:
+    automation.nephio.org/config-injection: "True"
+    internal.kpt.dev/upstream-identifier: 'nf.nephio.org|UPFDeployment|default|upf-deployment'
+spec: {}

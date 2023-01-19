@@ -1,0 +1,13 @@
+apiVersion: infra.nephio.org/v1alpha1
+kind: ClusterContext
+metadata: # kpt-merge: /cluster-context
+  name: cluster-context
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    automation.nephio.org/config-injection: "True"
+    internal.kpt.dev/upstream-identifier: 'infra.nephio.org|ClusterContext|default|cluster-context'
+spec:
+  siteCode: example
+  cniConfig:
+    cniType: macvlan
+    masterInterface: ens0

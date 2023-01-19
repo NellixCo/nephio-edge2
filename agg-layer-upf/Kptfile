@@ -1,0 +1,26 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /agg-layer-upf
+  name: agg-layer-upf
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|agg-layer-upf'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/free5gc-packages.git
+    directory: free5gc-upf
+    ref: free5gc-upf/v1
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/free5gc-packages.git
+    directory: free5gc-upf
+    ref: free5gc-upf/v1
+    commit: c18aa98d2c5a49e2aa5b62a6237ebef178721180
+info:
+  description: free5gc UPF package for creating UPF deployments that will be made by the Nephio free5gc edge operator
+pipeline:
+  mutators:
+  - image: gcr.io/jbelamaric-public/nephio-upf-ipam-fn:latest
+  - image: gcr.io/jbelamaric-public/nad-inject-fn:latest

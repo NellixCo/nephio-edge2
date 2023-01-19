@@ -1,0 +1,9 @@
+apiVersion: free5gc.nephio.org/v1alpha1
+kind: ImageConfig
+metadata: # kpt-merge: /image-config
+  name: image-config
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'free5gc.nephio.org|ImageConfig|default|image-config'
+spec:
+  imagePaths:
+    upf: towards5gs/free5gc-upf:v3.1.1
