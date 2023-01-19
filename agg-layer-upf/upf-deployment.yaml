@@ -5,4 +5,5 @@ metadata: # kpt-merge: /upf-deployment
   annotations:
     automation.nephio.org/config-injection: "True"
     internal.kpt.dev/upstream-identifier: 'nf.nephio.org|UPFDeployment|default|upf-deployment'
-spec: {}
+  namespace: upf
+spec: {capacity: {downlinkThroughput: 10G, uplinkThroughput: 1G}, n3Interfaces: [{gatewayIPs: [""], ips: [""], name: n3}], n4Interfaces: [{gatewayIPs: [""], ips: [""], name: n4}], n6Interfaces: [{dnn: internet, interface: {gatewayIPs: [""], ips: [""], name: n6}, ueIPPool: ""}]}

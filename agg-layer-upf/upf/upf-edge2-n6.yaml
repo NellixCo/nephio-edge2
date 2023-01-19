@@ -1,0 +1,17 @@
+apiVersion: ipam.nephio.org/v1alpha1
+kind: IPAllocation
+metadata:
+  annotations:
+    config.kubernetes.io/local-config: "true"
+  creationTimestamp: null
+  labels:
+    nephio.org/interface: n6
+  name: upf-edge2-n6
+  namespace: upf
+spec:
+  kind: network
+  selector:
+    matchLabels:
+      nephio.org/network-instance: sample-vpc
+      nephio.org/network-name: sample-n6-net
+status: {}
