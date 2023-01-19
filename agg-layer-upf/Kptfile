@@ -35,18 +35,18 @@ status:
     reason: ResourceInjected
     message: injected from FiveGCoreTopology "fivegcoretopology-sample" UPF name "agg-layer"
   - type: ipam.nephio.org.IPAMAllocation.upf-edge2-n3.upf.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
   - type: ipam.nephio.org.IPAMAllocation.upf-edge2-n4.upf.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
   - type: ipam.nephio.org.IPAMAllocation.upf-edge2-n6.upf.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
   - type: ipam.nephio.org.IPAMAllocation.upf-edge2-internet.upf.Injected
-    status: "False"
-    reason: PendingInjection
-    message: Awaiting IP allocation and injection
+    status: "True"
+    reason: ResourceInjected
+    message: Injected IP allocation
