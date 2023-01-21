@@ -31,9 +31,9 @@ status:
     reason: ResourceInjectedFromCluster
     message: resource with apiVersion "infra.nephio.org/v1alpha1", kind "ClusterContext", name "edge2", and namespace "default" injected to the package revision from the cluster
   - type: nf.nephio.org.UPFDeployment.upf-deployment.Injected
-    status: "True"
-    reason: ResourceInjected
-    message: injected from FiveGCoreTopology "fivegcoretopology-sample" UPF name "agg-layer"
+    status: "False"
+    reason: ResourceNotFound
+    message: upfdeployments.nf.nephio.org "edge2" not found
   - type: ipam.nephio.org.IPAMAllocation.upf-edge2-n3.upf.Injected
     status: "True"
     reason: ResourceInjected
