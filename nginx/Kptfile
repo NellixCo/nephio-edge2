@@ -31,4 +31,4 @@ pipeline:
     configMap:
       name: nginx
       newName: bitnami/nginx
-      newTag: 1.21.4
+      newTag: 1.21.0#1.21.4
