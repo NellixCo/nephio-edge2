@@ -32,3 +32,4 @@ pipeline:
       name: nginx
       newName: nginx
       newTag: latest
+    configPath: deployment.yaml
