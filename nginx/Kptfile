@@ -32,6 +32,5 @@ pipeline:
       name: nginx
       newName: nginx
       newTag: latest
-    configPath: deployment.yaml
   - image: gcr.io/kpt-fn/set-image:v0.1.1
     configPath: deployment.yaml
