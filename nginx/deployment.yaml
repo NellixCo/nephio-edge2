@@ -6,7 +6,6 @@ metadata:
     internal.kpt.dev/upstream-identifier: apps|Deployment|default|my-nginx
   namespace: nginx
 spec:
-  replicas: 4
   selector:
     matchLabels:
       app: nginx
@@ -23,3 +22,4 @@ spec:
         ports:
         - protocol: TCP
           containerPort: 80
+  replicas: 2
