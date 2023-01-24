@@ -1,8 +1,8 @@
-apiVersion: v1
-kind: ConfigMap
+apiVersion: fn.kpt.dev/v1alpha1
+kind: SetImage
 metadata:
-  name: nginx-config
-data:
+  name: nginx-config-fn
+image:
   name: nginx
   newName: bitnami/nginx
   newTag: 1.21.4
