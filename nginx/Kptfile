@@ -30,5 +30,5 @@ pipeline:
   - image: gcr.io/kpt-fn/set-image:v0.1.1
     configMap:
       name: nginx
-      newName: bitnami/nginx
-      newTag: 1.21.0#1.21.4
+      newName: nginx
+      newTag: latest
