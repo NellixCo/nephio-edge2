@@ -4,7 +4,7 @@ metadata:
   name: nginx-test
   annotations:
     internal.kpt.dev/upstream-identifier: apps|Deployment|default|my-nginx
-  namespace: nginx
+  namespace: nginx-set-ns
 spec:
   replicas: 4
   selector:
