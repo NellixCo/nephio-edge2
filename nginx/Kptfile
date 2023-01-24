@@ -2,12 +2,24 @@ apiVersion: kpt.dev/v1
 kind: Kptfile
 metadata:
   name: nginx
-  annotations:
-    config.kubernetes.io/local-config: "true"
+upstream:
+  type: git
+  git:
+    repo: https://github.com/GoogleContainerTools/kpt
+    directory: /package-examples/nginx
+    ref: v0.9
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/GoogleContainerTools/kpt
+    directory: /package-examples/nginx
+    ref: package-examples/nginx/v0.9
+    commit: b9ea0bca019dafa9f9f91fd428385597c708518c
 info:
+  emails:
+  - kpt-team@google.com
   description: nginx k8s package
-  keywords:
-  - nginx
 pipeline:
   validators:
   - image: gcr.io/kpt-fn/kubeval:v0.3.0
@@ -15,3 +27,5 @@ pipeline:
   mutators:
   - image: gcr.io/kpt-fn/set-namespace:v0.4.1
     configPath: set-namespace.yaml
+  - image: gcr.io/kpt-fn/set-image:v0.1.1
+    configPath: nginx-config.yaml
