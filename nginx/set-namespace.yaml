@@ -4,4 +4,4 @@ metadata:
   name: set-namespace
   annotations:
     config.kubernetes.io/local-config: "true"
-namespace: nginx-set-ns
+namespace: nginx

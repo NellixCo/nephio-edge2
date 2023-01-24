@@ -6,6 +6,6 @@ metadata:
   annotations:
     config.kubernetes.io/local-config: "true"
 image:
-  name: nginx
+  name: bitnami/nginx
   newName: nginx
-  newTag: 1.21.4
+  newTag: latest
