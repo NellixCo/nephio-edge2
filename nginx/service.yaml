@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: app
   annotations:
     internal.kpt.dev/upstream-identifier: '|Service|default|my-nginx-svc'
-  namespace: nginx-set-ns
+  namespace: nginx
 spec:
   type: LoadBalancer
   ports:
