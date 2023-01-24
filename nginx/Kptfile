@@ -28,4 +28,7 @@ pipeline:
   - image: gcr.io/kpt-fn/set-namespace:v0.4.1
     configPath: set-namespace.yaml
   - image: gcr.io/kpt-fn/set-image:v0.1.1
-    configPath: nginx-config-fn.yaml
+    configMap:
+      name: nginx
+      newName: bitnami/nginx
+      newTag: 1.21.4
