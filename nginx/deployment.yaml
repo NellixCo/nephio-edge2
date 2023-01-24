@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-test
+  annotations:
+    internal.kpt.dev/upstream-identifier: apps|Deployment|default|my-nginx
+  namespace: nginx
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: nginx
+      app.kubernetes.io/name: app
+  template:
+    metadata:
+      labels:
+        app: nginx
+        app.kubernetes.io/name: app
+    spec:
+      containers:
+      - name: nginx
+        image: bitnami/nginx:1.21.4
+        ports:
+        - protocol: TCP
+          containerPort: 80
