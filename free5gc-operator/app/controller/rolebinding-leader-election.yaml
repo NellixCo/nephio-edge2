@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: # kpt-merge: free5gc/free5gc-operator-controller-controller-leader-election-role-binding
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/component: tbd
+    app.kubernetes.io/instance: tbd
+    app.kubernetes.io/managed-by: kpt
+    app.kubernetes.io/name: free5gc-operator-controller
+    app.kubernetes.io/part-of: free5gc-operator-controller
+    app.kubernetes.io/version: tbd
+  name: free5gc-operator-controller-controller-leader-election-role-binding
+  namespace: free5gc
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'rbac.authorization.k8s.io|RoleBinding|free5gc|free5gc-operator-controller-controller-leader-election-role-binding'
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: free5gc-operator-controller-controller-leader-election-role
+subjects:
+- kind: ServiceAccount
+  name: free5gc-operator-controller-controller
