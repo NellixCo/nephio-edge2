@@ -1,0 +1,7 @@
+apiVersion: fn.kpt.dev/v1alpha1
+kind: SetNamespace
+metadata:
+  name: set-namespace
+  annotations:
+    config.kubernetes.io/local-config: "true"
+namespace: nginx
