@@ -1,0 +1,31 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /nginx-test-clusters
+  name: nginx-test-clusters
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|nginx-test-clusters'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/NellixCo/ale-packages.git
+    directory: nginx-ale
+    ref: nginx-ale/v1
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/NellixCo/ale-packages.git
+    directory: nginx-ale
+    ref: nginx-ale/v1
+    commit: 202627962815817732b7291300b0b19ee5afe5de
+info:
+  description: nginx for ale
+  keywords:
+  - nginx
+pipeline:
+  mutators:
+  - image: gcr.io/kpt-fn/set-namespace:v0.4.1
+    configPath: set-namespace.yaml
+  validators:
+  - image: gcr.io/kpt-fn/kubeval:v0.3.0
+    configPath: kubeval-config.yaml
