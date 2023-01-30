@@ -5,4 +5,4 @@ metadata: # kpt-merge: /set-namespace
   annotations:
     config.kubernetes.io/local-config: "true"
     internal.kpt.dev/upstream-identifier: 'fn.kpt.dev|SetNamespace|default|set-namespace'
-namespace: nginx-ale
+namespace: nginx-ale2

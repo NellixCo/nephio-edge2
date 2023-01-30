@@ -4,7 +4,7 @@ metadata: # kpt-merge: /my-nginx
   name: my-nginx
   annotations:
     internal.kpt.dev/upstream-identifier: 'apps|Deployment|default|my-nginx'
-  namespace: nginx-ale
+  namespace: nginx-ale2
 spec:
   replicas: 4
   selector:

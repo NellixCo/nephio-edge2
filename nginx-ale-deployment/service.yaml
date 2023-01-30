@@ -6,7 +6,7 @@ metadata: # kpt-merge: /my-nginx-svc
     app: nginx
   annotations:
     internal.kpt.dev/upstream-identifier: '|Service|default|my-nginx-svc'
-  namespace: nginx-ale
+  namespace: nginx-ale2
 spec:
   type: LoadBalancer
   selector:
