@@ -14,4 +14,4 @@ spec:
     matchLabels:
       nephio.org/network-instance: sample-vpc
       nephio.org/network-name: sample-n3-net
-status: {}
+status: {conditionedstatus: {conditions: []}, allocatedprefix: 10.0.0.3/32, gateway: 10.0.0.1}
